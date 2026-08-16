@@ -11,7 +11,7 @@ import 'package:cli_task_management/repositories/Repository.dart';
 import 'dart:io';
 import 'package:collection/collection.dart';
 
-class TaskRepositoryJSON implements Repository<Task> {
+class TaskRepositoryJSON <T extends Task> {
   FileStorage storage = new FileStorage(path: 'tasks.json');
 
   List<Task> _tasks = [];
