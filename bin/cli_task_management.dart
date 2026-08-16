@@ -12,9 +12,10 @@ const String version = '0.0.1';
 // final AjouterTaskScreen ajouterTaskScreen = AjouterTaskScreen(taskRepository);
 
 Future<void> main(List<String> arguments) async {
-  final TaskRepositoryJSON<Task> repository = TaskRepositoryJSON();
+  final Repository repository = TaskRepositoryJSON();
   await repository.init();
 
+  await repository.init();
 
   final ajouterTaskScreen = AjouterTaskScreen(repository);
 

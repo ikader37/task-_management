@@ -4,10 +4,9 @@ import 'package:cli_task_management/models/Status.dart';
 import 'package:cli_task_management/models/Task.dart';
 import 'package:cli_task_management/models/UrgentTask.dart';
 import 'package:cli_task_management/repositories/Repository.dart';
-import 'package:cli_task_management/repositories/TaskRepositoryJSON.dart';
 
 class AjouterTaskScreen {
-  final TaskRepositoryJSON taskRepository;
+  final Repository taskRepository;
   AjouterTaskScreen(this.taskRepository);
   Future<int> processCreateTask() async {
     print("Ajout une nouvelle tâche");
