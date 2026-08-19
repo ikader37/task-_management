@@ -139,7 +139,7 @@ int readInt(String label) {
   final value = readText(label);
   final number = int.tryParse(value);
   if (number == null) {
-    throw InvalidTaskDataException('Veuillez saisir un nombre valide.');
+    throw InvalidTaskDataException('Veuillez saisir un nombre valide. La valeur saisie est : $value. Le choix doit être un nombre entier.');
   }
   return number;
 }
