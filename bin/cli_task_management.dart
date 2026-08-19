@@ -40,18 +40,19 @@ Future<void> main(List<String> arguments) async {
       case 1:
         await ajouterTaskScreen.processCreateTask();
         print("Ajout d'une tâche...");
-        choix=0; // Réinitialiser le choix pour revenir au menu principal
+        choix = 0; // Réinitialiser le choix pour revenir au menu principal
         break;
       case 2:
         await ajouterTaskScreen.removeTask();
-        print("7- Quitter ");
-        print("Autre touche pour Retour au menu principal");
-        try {
-          choix = readInt("Veuillez entrer votre choix: ");
-        } catch (e) {
-          print("Entrée invalide. Retour au menu principal.");
-          choix = 0; // Réinitialiser le choix pour revenir au menu principal
-        }
+        // print("Autre touche pour Retour au menu principal");
+        // try {
+        //   choix = readInt("Veuillez entrer votre choix: ");
+        // } catch (e) {
+        //   print("Entrée invalide. Retour au menu principal.");
+        //   choix = 0; // Réinitialiser le choix pour revenir au menu principal
+        // }
+        choix = 0; // Réinitialiser le choix pour revenir au menu principal
+
         break;
       case 3:
         List<dynamic> tasks = await ajouterTaskScreen.getAllTasks();
@@ -60,14 +61,15 @@ Future<void> main(List<String> arguments) async {
             "Titre: ${task.title}\nDate Limite: ${task.dateLimit}\nPriorité: ${task.priority}\nStatut: ${task.status}",
           );
         }
-        print("7- Quitter ");
-        print("Autre touche pour Retour au menu principal");
-        try {
-          choix = readInt("Veuillez entrer votre choix: ");
-        } catch (e) {
-          print("Entrée invalide. Retour au menu principal.");
-          choix = 0; // Réinitialiser le choix pour revenir au menu principal
-        }
+        // print("7- Quitter ");
+        // print("Autre touche pour Retour au menu principal");
+        // try {
+        //   choix = readInt("Veuillez entrer votre choix: ");
+        // } catch (e) {
+        //   print("Entrée invalide. Retour au menu principal.");
+        //   choix = 0; // Réinitialiser le choix pour revenir au menu principal
+        // }
+        choix = 0; // Réinitialiser le choix pour revenir au menu principal
 
         break;
       case 4:
@@ -78,19 +80,20 @@ Future<void> main(List<String> arguments) async {
             "Titre: ${task.title}\nDate Limite: ${task.dateLimit}\nPriorité: ${task.priority}\nStatut: ${task.status}",
           );
         }
-        print("7- Quitter ");
-        print("Autre touche pour Retour au menu principal");
-        try {
-          choix = readInt("Veuillez entrer votre choix: ");
-        } catch (e) {
-          print("Entrée invalide. Retour au menu principal.");
-          choix = 0; // Réinitialiser le choix pour revenir au menu principal
-        }
+        // print("7- Quitter ");
+        // print("Autre touche pour Retour au menu principal");
+        // try {
+        //   choix = readInt("Veuillez entrer votre choix: ");
+        // } catch (e) {
+        //   print("Entrée invalide. Retour au menu principal.");
+        //   choix = 0; // Réinitialiser le choix pour revenir au menu principal
+        // }
+        choix = 0; // Réinitialiser le choix pour revenir au menu principal
         break;
       case 5:
         await ajouterTaskScreen.markTaskAsCompleted();
-       
-          choix = 0; // Réinitialiser le choix pour revenir au menu principal
+
+        choix = 0; // Réinitialiser le choix pour revenir au menu principal
         break;
       case 6:
         List<dynamic> urgentTasks = await ajouterTaskScreen.getUrgentTasks();

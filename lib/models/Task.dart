@@ -15,7 +15,7 @@ import 'package:cli_task_management/models/Status.dart';
     required this.dateLimit,
     required this.priority,
     this.status,
-    this.id = 0,
+    this.id = 1,
   });
 
   Map<String, dynamic> toJson() {

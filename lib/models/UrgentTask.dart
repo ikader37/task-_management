@@ -13,7 +13,8 @@ class UrgentTask extends Task implements Urgent {
       required super.dateLimit,
       required super.priority,
       this.isUrgent = false,
-      super.status, required super.id,
+      super.status, 
+      required super.id,
     });
 
     factory UrgentTask.fromJson(Map<String, dynamic> json) {
