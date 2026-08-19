@@ -225,6 +225,5 @@ class AjouterTaskScreen {
     }
 
       return await taskRepository.listTasksByDate(dateStr);
-    return [];
   }
 }

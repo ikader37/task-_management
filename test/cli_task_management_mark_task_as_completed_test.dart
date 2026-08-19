@@ -18,6 +18,6 @@ void main() {
    await repository.markTaskAsCompleted(task.id);
    final updatedTask = await repository.getTaskById(task.id);
 
-   expect(updatedTask?.status, Status.COMPLETED);
+   expect(updatedTask.status, Status.COMPLETED);
  });
 }

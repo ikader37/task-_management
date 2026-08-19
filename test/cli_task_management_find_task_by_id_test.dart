@@ -17,7 +17,7 @@ test("4. Récupération d'une tâche par ID", () async {
    await repository.addTask(task);
    final retrievedTask = await repository.getTaskById(task.id);
 
-   expect(retrievedTask?.title, 'Task to retrieve');
+   expect(retrievedTask.title, 'Task to retrieve');
  });
  
 }
