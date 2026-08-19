@@ -23,7 +23,7 @@ import 'package:cli_task_management/models/Status.dart';
       'id': id,
       'title': title,
       'description': description,
-      'dateLimit': dateLimit.toIso8601String(),
+      'dateLimit': dateLimit.toUtc().toIso8601String(),
       'priority': priority?.name,
       'status': status?.name,
     };

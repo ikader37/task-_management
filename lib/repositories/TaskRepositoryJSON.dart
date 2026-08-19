@@ -128,15 +128,14 @@ class TaskRepositoryJSON implements Repository<Task> {
 
   @override
   Future<List<UrgentTask>> getUrgentTasks() async {
-    final jsonString = await storage.read();
-    final List<dynamic> jsonList = jsonDecode(jsonString);
-    List<UrgentTask> _tasksU = jsonList
-        .map((json) => UrgentTask.fromJson(json))
-        .toList();
-    return _tasksU
-        .where((task) => task?.isUrgent == true)
-        .cast<UrgentTask>()
-        .toList();
+   final jsonString = await storage.read();
+final List<dynamic> jsonList = jsonDecode(jsonString);
+
+return jsonList
+    .whereType<Map<String, dynamic>>()
+    .where((json) => json['isUrgent'] == true)
+    .map(UrgentTask.fromJson)
+    .toList();
   }
 
   @override

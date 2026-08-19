@@ -5,7 +5,7 @@ import 'package:cli_task_management/models/Urgent.dart';
 
 class UrgentTask extends Task implements Urgent {
    @override
-    bool isUrgent;
+  final bool isUrgent;
 
     UrgentTask({
       required super.title,
