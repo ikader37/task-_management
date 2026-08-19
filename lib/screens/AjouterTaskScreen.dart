@@ -8,7 +8,7 @@ import 'package:cli_task_management/repositories/Repository.dart';
 class AjouterTaskScreen {
   final Repository taskRepository;
   AjouterTaskScreen(this.taskRepository);
-  Future<int> processCreateTask() async {
+  Future<void> processCreateTask() async {
     print("Ajout une nouvelle tâche");
     print("Veuillez entrer le titre de la tâche :");
     String? titre = stdin.readLineSync();
@@ -113,7 +113,6 @@ class AjouterTaskScreen {
       await taskRepository.addTask(newTask);
     }
     print("La tache a été ajoutée avec succès !");
-    return 0;
   }
 
   Future<List<dynamic>> getAllTasks() async {

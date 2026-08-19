@@ -21,6 +21,7 @@ class TaskRepositoryJSON implements Repository<Task> {
   }
 
   Future<void> init() async {
+    _tasks = [];
     try {
       final jsonString = await storage.read();
 

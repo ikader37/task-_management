@@ -15,8 +15,6 @@ Future<void> main(List<String> arguments) async {
   final Repository repository = TaskRepositoryJSON();
   await repository.init();
 
-  await repository.init();
-
   final ajouterTaskScreen = AjouterTaskScreen(repository);
 
   int choix = 0;
@@ -40,8 +38,9 @@ Future<void> main(List<String> arguments) async {
     }
     switch (choix) {
       case 1:
-        choix = await ajouterTaskScreen.processCreateTask();
+        await ajouterTaskScreen.processCreateTask();
         print("Ajout d'une tâche...");
+        choix=0; // Réinitialiser le choix pour revenir au menu principal
         break;
       case 2:
         await ajouterTaskScreen.removeTask();
@@ -90,14 +89,8 @@ Future<void> main(List<String> arguments) async {
         break;
       case 5:
         await ajouterTaskScreen.markTaskAsCompleted();
-        print("7- Quitter ");
-        print("Autre touche pour Retour au menu principal");
-        try {
-          choix = readInt("Veuillez entrer votre choix: ");
-        } catch (e) {
-          print("Entrée invalide. Retour au menu principal.");
+       
           choix = 0; // Réinitialiser le choix pour revenir au menu principal
-        }
         break;
       case 6:
         List<dynamic> urgentTasks = await ajouterTaskScreen.getUrgentTasks();
