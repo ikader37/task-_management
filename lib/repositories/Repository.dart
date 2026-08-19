@@ -1,7 +1,6 @@
 import 'package:cli_task_management/models/Task.dart';
 import 'package:cli_task_management/models/Status.dart';
 import 'package:cli_task_management/models/Priority.dart';
-import 'package:cli_task_management/models/UrgentTask.dart';
 
 abstract interface class Repository<T> {
   Future<void> addTask(Task task);

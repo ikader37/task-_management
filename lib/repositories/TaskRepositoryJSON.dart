@@ -8,7 +8,6 @@ import 'package:cli_task_management/models/Priority.dart';
 import 'package:cli_task_management/models/UrgentTask.dart';
 import 'package:cli_task_management/repositories/FileStorage.dart';
 import 'package:cli_task_management/repositories/Repository.dart';
-import 'dart:io';
 import 'package:collection/collection.dart';
 
 class TaskRepositoryJSON implements Repository<Task> {
@@ -16,9 +15,9 @@ class TaskRepositoryJSON implements Repository<Task> {
 
   List<Task> _tasks = [];
   TaskRepositoryJSON();
-  Future<File> _getFile() async {
-    return File('tasks.json');
-  }
+  // Future<File> _getFile() async {
+  //   return File('tasks.json');
+  // }
 
   Future<void> init() async {
     _tasks = [];
